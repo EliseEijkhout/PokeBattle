@@ -4,12 +4,12 @@
 
 		public $health = 60;
 		public $hitpoints = 60;
-		public $energyType = 'Fire';
 
 		public function __construct($name){
 
+			$energyType = new EnergyType('Fire');
 
-			$weakness = new Weakness('Water', 1.5);
+			$weakness = new Weakness('Water', '1.5');
 
 			$resistance = new Resistance('Fighting', 20);
 
