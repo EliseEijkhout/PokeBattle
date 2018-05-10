@@ -17,14 +17,14 @@ class Pokemon {
     //Een functie kan pas een constuctor worden als hij __construct heet.
     // Alles met '__' zoals bij de __construct is een zogenoemde "Magic Method"    
 
-	public function __construct($name, $energyType, $attacks, $hitpoints, $resistance, $weakness) {
+    public function __construct($name, $energyType, $hitpoints, $attacks, $weakness, $resistance) {
         $this->name = $name;
         $this->energyType = $energyType;
+        $this->hitpoints = $hitpoints;
         $this->health = $hitpoints;
         $this->attacks = $attacks;
-        $this->hitpoints = $hitpoints;
-        $this->resistance = $resistance;
         $this->weakness = $weakness;
+        $this->resistance = $resistance;
     }
 
  
@@ -43,8 +43,7 @@ class Pokemon {
                 }
                 
                 $newHealth = $pokemon->health - $damage;
-                $pokemon->health = $newHealth;
-                
+                $pokemon->health = $newHealth; 
             }
         }
     }
